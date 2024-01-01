@@ -1,0 +1,318 @@
+# from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
+# import inference
+# class AnimalClassifier(QWidget):
+#     def __init__(self):
+#         super().__init__()
+#         self.initUI()
+#
+#     def initUI(self):
+#         self.setWindowTitle('动物识别系统')
+#         self.setGeometry(300, 300, 300, 220)
+#
+#         layout = QVBoxLayout()
+#
+#         self.label = QLabel('请输入动物特征（用逗号分隔）:')
+#         layout.addWidget(self.label)
+#
+#         self.lineEdit = QLineEdit(self)
+#         layout.addWidget(self.lineEdit)
+#
+#         self.btn = QPushButton('识别动物', self)
+#         self.btn.clicked.connect(self.on_click)
+#         layout.addWidget(self.btn)
+#
+#         self.setLayout(layout)
+#
+#     def buttonclick(self):
+#         checkboxState = self.checkboxState()
+#         # 调用 professor 模块中的 find_animal 函数
+#         result_text = professor.find_animal(checkboxState)
+#         self.textBrowser.setText(result_text)
+#
+#
+#     def on_click(self):
+#         input_text = self.lineEdit.text()
+#         features = input_text.split(',')
+#         result = self.identify_animal(features)
+#         QMessageBox.information(self, '结果', f'识别的动物是: {result}')
+#
+#     def identify_animal(self, features):
+#         # 这里应该是您的动物识别逻辑
+#         # 以下是模拟的结果返回
+#         return "老虎"  # 举例，实际应该是根据features返回识别结果
+#
+# def main():
+#     app = QApplication(sys.argv)
+#     ex = AnimalClassifier()
+#     ex.show()
+#     sys.exit(app.exec_())
+#
+# if __name__ == '__main__':
+#     main()
+
+
+# class Ui_Form(object):
+#     def setupUi(self, Form):
+#         Form.setObjectName("Form")
+#         Form.resize(692, 421)
+#
+#         self.gridLayoutWidget = QtWidgets.QWidget(Form)
+#         self.gridLayoutWidget.setGeometry(QtCore.QRect(50, 50, 548, 194))
+#         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
+#         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
+#         self.gridLayout.setContentsMargins(0, 0, 0, 0)
+#         self.gridLayout.setObjectName("gridLayout")
+#         self.checkBox_1 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_1.setObjectName("checkBox")
+#         self.gridLayout.addWidget(self.checkBox_1, 0, 0, 1, 1)
+#         self.checkBox_2 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_2.setObjectName("checkBox_2")
+#         self.gridLayout.addWidget(self.checkBox_2, 0, 1, 1, 1)
+#         self.checkBox_3 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_3.setObjectName("checkBox_3")
+#         self.gridLayout.addWidget(self.checkBox_3, 0, 2, 1, 1)
+#         self.checkBox_4 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_4.setObjectName("checkBox_4")
+#         self.gridLayout.addWidget(self.checkBox_4, 0, 3, 1, 1)
+#         self.checkBox_5 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_5.setObjectName("checkBox_5")
+#         self.gridLayout.addWidget(self.checkBox_5, 1, 0, 1, 1)
+#         self.checkBox_6 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_6.setObjectName("checkBox_6")
+#         self.gridLayout.addWidget(self.checkBox_6, 1, 1, 1, 1)
+#         self.checkBox_7 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_7.setObjectName("checkBox_7")
+#         self.gridLayout.addWidget(self.checkBox_7, 1, 2, 1, 1)
+#         self.checkBox_8 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_8.setObjectName("checkBox_8")
+#         self.gridLayout.addWidget(self.checkBox_8, 1, 3, 1, 1)
+#         self.checkBox_9 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_9.setObjectName("checkBox_9")
+#         self.gridLayout.addWidget(self.checkBox_9, 2, 0, 1, 1)
+#         self.checkBox_10 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_10.setObjectName("checkBox_10")
+#         self.gridLayout.addWidget(self.checkBox_10, 2, 1, 1, 1)
+#         self.checkBox_11 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_11.setObjectName("checkBox_11")
+#         self.gridLayout.addWidget(self.checkBox_11, 2, 2, 1, 1)
+#         self.checkBox_12 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_12.setObjectName("checkBox_12")
+#         self.gridLayout.addWidget(self.checkBox_12, 2, 3, 1, 1)
+#         self.checkBox_13 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_13.setObjectName("checkBox_13")
+#         self.gridLayout.addWidget(self.checkBox_13, 3, 0, 1, 1)
+#         self.checkBox_14 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_14.setObjectName("checkBox_14")
+#         self.gridLayout.addWidget(self.checkBox_14, 3, 1, 1, 1)
+#         self.checkBox_15 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_15.setObjectName("checkBox_15")
+#         self.gridLayout.addWidget(self.checkBox_15, 3, 2, 1, 1)
+#         self.checkBox_16 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_16.setObjectName("checkBox_16")
+#         self.gridLayout.addWidget(self.checkBox_16, 3, 3, 1, 1)
+#         self.checkBox_17 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_17.setObjectName("checkBox_17")
+#         self.gridLayout.addWidget(self.checkBox_17, 5, 0, 1, 1)
+#         self.checkBox_18 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_18.setObjectName("checkBox_18")
+#         self.gridLayout.addWidget(self.checkBox_18, 5, 1, 1, 1)
+#         self.checkBox_19 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_19.setObjectName("checkBox_19")
+#         self.gridLayout.addWidget(self.checkBox_19, 5, 2, 1, 1)
+#         self.checkBox_20 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_20.setObjectName("checkBox_20")
+#         self.gridLayout.addWidget(self.checkBox_20, 5, 3, 1, 1)
+#         self.checkBox_21 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_21.setObjectName("checkBox_21")
+#         self.gridLayout.addWidget(self.checkBox_21, 6, 0, 1, 1)
+#         self.checkBox_22 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_22.setObjectName("checkBox_22")
+#         self.gridLayout.addWidget(self.checkBox_22, 6, 1, 1, 1)
+#         self.checkBox_23 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_23.setObjectName("checkBox_23")
+#         self.gridLayout.addWidget(self.checkBox_23, 6, 2, 1, 1)
+#         self.checkBox_24 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_24.setObjectName("checkBox_24")
+#         self.gridLayout.addWidget(self.checkBox_24, 6, 3, 1, 1)
+#         self.checkBox_25 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_25.setObjectName("checkBox_25")
+#         self.gridLayout.addWidget(self.checkBox_25, 7, 0, 1, 1)
+#         self.checkBox_26 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_26.setObjectName("checkBox_26")
+#         self.gridLayout.addWidget(self.checkBox_26, 7, 1, 1, 1)
+#         self.checkBox_27 = QtWidgets.QCheckBox(self.gridLayoutWidget)
+#         self.checkBox_27.setObjectName("checkBox_27")
+#         self.gridLayout.addWidget(self.checkBox_27, 7, 2, 1, 1)
+#         self.label = QtWidgets.QLabel(Form)
+#         self.label.setGeometry(QtCore.QRect(310, 30, 54, 12))
+#         self.label.setObjectName("label")
+#         self.label_2 = QtWidgets.QLabel(Form)
+#         self.label_2.setGeometry(QtCore.QRect(50, 250, 281, 16))
+#         self.label_2.setObjectName("label_2")
+#         self.pushButton = QtWidgets.QPushButton(Form)
+#         self.pushButton.setGeometry(QtCore.QRect(520, 280, 75, 23))
+#         self.pushButton.setObjectName("pushButton")
+#         self.pushButton_2 = QtWidgets.QPushButton(Form)
+#         self.pushButton_2.setGeometry(QtCore.QRect(520, 310, 75, 23))
+#         self.pushButton_2.setObjectName("pushButton_2")
+#         self.textBrowser = QtWidgets.QTextBrowser(Form)
+#         self.textBrowser.setGeometry(QtCore.QRect(50, 270, 461, 71))
+#         self.textBrowser.setObjectName("textBrowser")
+#
+#         # 按键响应
+#         self.pushButton.clicked.connect(self.buttonclick)
+#         self.pushButton_2.clicked.connect(self.buttonclick_2)
+#
+#         self.retranslateUi(Form)
+#         QtCore.QMetaObject.connectSlotsByName(Form)
+#
+#     def checkboxState(self):
+#         checkboxState = []
+#
+#         checkBoxStatus_1 = self.checkBox_1.isChecked()
+#         checkBoxStatus_2 = self.checkBox_2.isChecked()
+#         checkBoxStatus_3 = self.checkBox_3.isChecked()
+#         checkBoxStatus_4 = self.checkBox_4.isChecked()
+#         checkBoxStatus_5 = self.checkBox_5.isChecked()
+#         checkBoxStatus_6 = self.checkBox_6.isChecked()
+#         checkBoxStatus_7 = self.checkBox_7.isChecked()
+#         checkBoxStatus_8 = self.checkBox_8.isChecked()
+#         checkBoxStatus_9 = self.checkBox_9.isChecked()
+#         checkBoxStatus_10 = self.checkBox_10.isChecked()
+#         checkBoxStatus_11 = self.checkBox_11.isChecked()
+#         checkBoxStatus_12 = self.checkBox_12.isChecked()
+#         checkBoxStatus_13 = self.checkBox_13.isChecked()
+#         checkBoxStatus_14 = self.checkBox_14.isChecked()
+#         checkBoxStatus_15 = self.checkBox_15.isChecked()
+#         checkBoxStatus_16 = self.checkBox_16.isChecked()
+#         checkBoxStatus_17 = self.checkBox_17.isChecked()
+#         checkBoxStatus_18 = self.checkBox_18.isChecked()
+#         checkBoxStatus_19 = self.checkBox_19.isChecked()
+#         checkBoxStatus_20 = self.checkBox_20.isChecked()
+#         checkBoxStatus_21 = self.checkBox_21.isChecked()
+#         checkBoxStatus_22 = self.checkBox_22.isChecked()
+#         checkBoxStatus_23 = self.checkBox_23.isChecked()
+#         checkBoxStatus_24 = self.checkBox_24.isChecked()
+#         checkBoxStatus_25 = self.checkBox_25.isChecked()
+#         checkBoxStatus_26 = self.checkBox_26.isChecked()
+#         checkBoxStatus_27 = self.checkBox_27.isChecked()
+#
+#         # for i in range(1, 28):
+#         #     name = "checkBox_" + str(1)
+#         #     checkboxState.append(self.name.isChecked())
+#
+#         if checkBoxStatus_1 == True:
+#             checkboxState.append(self.checkBox_1.text())
+#         if checkBoxStatus_2 == True:
+#             checkboxState.append(self.checkBox_2.text())
+#         if checkBoxStatus_3 == True:
+#             checkboxState.append(self.checkBox_3.text())
+#         if checkBoxStatus_4 == True:
+#             checkboxState.append(self.checkBox_4.text())
+#         if checkBoxStatus_5 == True:
+#             checkboxState.append(self.checkBox_5.text())
+#         if checkBoxStatus_6 == True:
+#             checkboxState.append(self.checkBox_6.text())
+#         if checkBoxStatus_7 == True:
+#             checkboxState.append(self.checkBox_7.text())
+#         if checkBoxStatus_8 == True:
+#             checkboxState.append(self.checkBox_8.text())
+#         if checkBoxStatus_9 == True:
+#             checkboxState.append(self.checkBox_9.text())
+#         if checkBoxStatus_10 == True:
+#             checkboxState.append(self.checkBox_10.text())
+#         if checkBoxStatus_11 == True:
+#             checkboxState.append(self.checkBox_11.text())
+#         if checkBoxStatus_12 == True:
+#             checkboxState.append(self.checkBox_12.text())
+#         if checkBoxStatus_13 == True:
+#             checkboxState.append(self.checkBox_13.text())
+#         if checkBoxStatus_14 == True:
+#             checkboxState.append(self.checkBox_14.text())
+#         if checkBoxStatus_15 == True:
+#             checkboxState.append(self.checkBox_15.text())
+#         if checkBoxStatus_16 == True:
+#             checkboxState.append(self.checkBox_16.text())
+#         if checkBoxStatus_17 == True:
+#             checkboxState.append(self.checkBox_17.text())
+#         if checkBoxStatus_18 == True:
+#             checkboxState.append(self.checkBox_18.text())
+#         if checkBoxStatus_19 == True:
+#             checkboxState.append(self.checkBox_19.text())
+#         if checkBoxStatus_20 == True:
+#             checkboxState.append(self.checkBox_20.text())
+#         if checkBoxStatus_21 == True:
+#             checkboxState.append(self.checkBox_21.text())
+#         if checkBoxStatus_22 == True:
+#             checkboxState.append(self.checkBox_22.text())
+#         if checkBoxStatus_23 == True:
+#             checkboxState.append(self.checkBox_23.text())
+#         if checkBoxStatus_24 == True:
+#             checkboxState.append(self.checkBox_24.text())
+#         if checkBoxStatus_25 == True:
+#             checkboxState.append(self.checkBox_25.text())
+#         if checkBoxStatus_26 == True:
+#             checkboxState.append(self.checkBox_26.text())
+#         if checkBoxStatus_27 == True:
+#             checkboxState.append(self.checkBox_27.text())
+#
+#         return checkboxState
+#
+#
+#     def buttonclick(self):
+#         checkboxState = self.checkboxState()
+#         text = professor.reasoning(checkboxState)
+#         self.textBrowser.setText(text)
+#
+#
+#     def buttonclick_2(self):
+#         sys.exit(app.exec_())
+#
+#
+#     def retranslateUi(self, Form):
+#         _translate = QtCore.QCoreApplication.translate
+#         Form.setWindowTitle(_translate("Form", "动物分类识别系统"))
+#         self.checkBox_1.setText(_translate("Form", "有奶"))
+#         self.checkBox_2.setText(_translate("Form", "有毛发"))
+#         self.checkBox_3.setText(_translate("Form", "有羽毛"))
+#         self.checkBox_4.setText(_translate("Form", "会飞"))
+#         self.checkBox_5.setText(_translate("Form", "生蛋"))
+#         self.checkBox_6.setText(_translate("Form", "有爪"))
+#         self.checkBox_7.setText(_translate("Form", "有犬齿"))
+#         self.checkBox_8.setText(_translate("Form", "目盯前方"))
+#         self.checkBox_9.setText(_translate("Form", "吃肉"))
+#         self.checkBox_10.setText(_translate("Form", "有蹄"))
+#         self.checkBox_11.setText(_translate("Form", "反刍食物"))
+#         self.checkBox_12.setText(_translate("Form", "黄褐色"))
+#         self.checkBox_13.setText(_translate("Form", "有黑色条纹"))
+#         self.checkBox_14.setText(_translate("Form", "有黑色斑点"))
+#         self.checkBox_15.setText(_translate("Form", "长腿"))
+#         self.checkBox_16.setText(_translate("Form", "长脖子"))
+#         self.checkBox_17.setText(_translate("Form", "有暗斑点"))
+#         self.checkBox_18.setText(_translate("Form", "白色"))
+#         self.checkBox_19.setText(_translate("Form", "不会飞"))
+#         self.checkBox_20.setText(_translate("Form", "黑白色"))
+#         self.checkBox_21.setText(_translate("Form", "会游泳"))
+#         self.checkBox_22.setText(_translate("Form", "善飞"))
+#         self.checkBox_23.setText(_translate("Form", "不怕风浪"))
+#         self.checkBox_24.setText(_translate("Form", "哺乳动物"))
+#         self.checkBox_25.setText(_translate("Form", "鸟"))
+#         self.checkBox_26.setText(_translate("Form", "食肉动物"))
+#         self.checkBox_27.setText(_translate("Form", "有蹄动物"))
+#         self.label.setText(_translate("Form", "选项"))
+#         self.label_2.setText(_translate("Form", "按“确定开始推理”"))
+#         self.pushButton.setText(_translate("Form", "确定"))
+#         self.pushButton_2.setText(_translate("Form", "退出系统"))
+#
+#
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     Form = QtWidgets.QWidget()
+#     ui = Ui_Form()
+#     ui.setupUi(Form)
+#     Form.show()
+#     sys.exit(app.exec_())
+
+
+能否将classify_animals删除，最终返回都在find_data函数中，在GUI.py中调用interfece.find_data
